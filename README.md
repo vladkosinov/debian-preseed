@@ -9,9 +9,9 @@ Debian Buster preseed file and related configs for automatic installation over U
 ## Steps:
 - [prepare TFTP directory](#prepare-tftp-directory)
 - [set static IP for ethernet interface](#set-static-ip-for-ethernet-interface)
-- configure dnsmasq (DHCP + TFTP)
-- setup NAT for sharing internet
-- run http-server to serve `preseed.txt` and `postinstall.sh`
+- [configure dnsmasq (DHCP + TFTP)](#configure-dnsmasq-dhcp--tftp)
+- [setup NAT for sharing internet](#setup-nat-for-sharing-internet)
+- [create and serve `preseed.txt`](#create-and-serve-preseedtxt)
 - start installation
 
 ## prepare TFTP directory
@@ -128,8 +128,6 @@ to bypass [Force UEFI installation](https://askubuntu.com/questions/827545/ubunt
 sudo http-server -p 80 .
 ```
 
-
 ## Tested environment:
 - target machinie `NUC 6CAYH`
 - installation server `MacBook 16 (macOS 10.15.5)`
-
