@@ -17,7 +17,7 @@ Debian Buster preseed file and related configs for automatic installation over U
 ## prepare TFTP directory
 #### download and extract netboot installer
 ```
-http://ftp.debian.org/debian/dists/buster/main/installer-amd64/current/images/netboot/netboot.tar.gz
+http://ftp.debian.org/debian/dists/bookworm/main/installer-amd64/current/images/netboot/netboot.tar.gz
 ```
 
 #### copy `grubx64.efi` to the top of TFTP root

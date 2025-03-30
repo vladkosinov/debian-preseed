@@ -1,4 +1,4 @@
- #!/bin/sh
+#!/bin/sh
 exec >>/root/bootstrap.out 2>&1
 set -x
 
@@ -11,5 +11,5 @@ cp /root/.ssh/authorized_keys /home/user/.ssh/authorized_keys
 chown -R user:user /home/user/.ssh;
 chmod 644 /home/user/.ssh/authorized_keys;
 
-modprobe -r iwlwifi;
-modprobe iwlwifi;
+sudo sed -i 's/^#*\(PermitRootLogin\s*\).*$/PermitRootLogin no/' /etc/ssh/sshd_config
+sudo sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
